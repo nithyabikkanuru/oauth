@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <div style={styles.container}>
     <div style={styles.card}>
-      <h1 style={styles.heading}>Welcome to OAuth App</h1>
+      {/* <h1 style={styles.heading}>Welcome to OAuth App</h1> */}
+      <h1 style={styles.heading}>Nithya's Oauth  App </h1> 
   
       <p style={styles.text}>
   A full-stack authentication app that allows users to

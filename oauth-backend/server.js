@@ -41,7 +41,7 @@ app.set("trust proxy", 1);
 
 // Fixed Session Logic
 app.use(session({
-  secret: process.env.SESSION_SECRET || "priyanka_secure_67",
+  secret: process.env.SESSION_SECRET || "nithya_secure_67",
   resave: false,
   saveUninitialized: false, 
   proxy: true,
@@ -51,12 +51,12 @@ app.use(session({
     stringify: false, // Ensures session data is stored as a clean object
     ttl: 14 * 24 * 60 * 60 
   }),
-  cookie: {
-    secure: false,
-    httpOnly: true,
-    sameSite: "lax",
-    maxAge: 24 * 60 * 60 * 1000
-  }
+cookie: {
+  secure: true,
+  httpOnly: true,
+  sameSite: "none",
+  maxAge: 24 * 60 * 60 * 1000
+}
 }));
 
 app.use(passport.initialize());

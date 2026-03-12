@@ -38,7 +38,7 @@ const API_BASE_URL = "https://oauth-backend-8a74.onrender.com";
     };
 
     fetchUser();
-  }, [API_BASE_URL]);
+  }, []);
 
   // Global loading screen while fetching auth status
   if (loading) return <div className="loading">Loading...</div>;

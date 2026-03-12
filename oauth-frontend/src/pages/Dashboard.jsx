@@ -6,13 +6,13 @@ export default function Dashboard() {
   const [error, setError] = useState(false);
 
   // Use the dynamic API URL from environment variables
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://oauth-backend-8a74.onrender.com";
 
   useEffect(() => {
     axios.get(`${API_BASE_URL}/auth/me`, { withCredentials: true })
       .then(res => {
-        if (res.data && res.data.user)
-          console.log("USER DATA:", res.data.user); {
+        if (res.data && res.data.user){
+          console.log("USER DATA:", res.data.user); 
           setUser(res.data.user);
         }
       })
@@ -21,7 +21,7 @@ export default function Dashboard() {
         setError(true);
         window.location.href = "/";
       });
-  }, [API_BASE_URL]);
+  }, []);
 
   // FIXED LOGOUT: Uses Axios instead of window.location.href
   const handleLogout = async () => {

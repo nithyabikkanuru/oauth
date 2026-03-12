@@ -6,7 +6,7 @@ import { isAuthenticated } from "../middleware/auth.middleware.js";
 const router = express.Router();
 
 
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";;
+const CLIENT_URL = process.env.CLIENT_URL || "https://oauth-frontend-dnq9.onrender.com";
 
 router.get("/google", (req, res, next) => {
     console.log(" Step 1: Requesting Google Auth...");

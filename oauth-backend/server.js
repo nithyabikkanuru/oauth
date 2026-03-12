@@ -16,6 +16,7 @@ const app = express();
 // Use a cleaner CORS setup for production
 const allowedOrigins = [
   "http://localhost:5173", 
+    "https://oauth-frontend-dnq9.onrender.com"
   
 ];
 

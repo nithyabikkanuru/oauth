@@ -1,11 +1,15 @@
 import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({ user, children }) => {
-  if (!user) {
-    // Redirect to login if no user is found in state
-    return <Navigate to="/login" replace />;
+function ProtectedRoute({ user, loading, children }) {
+  if (loading) {
+    return <div>Loading...</div>;
   }
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
+
   return children;
-};
+}
 
 export default ProtectedRoute;
